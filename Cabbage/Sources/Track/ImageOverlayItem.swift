@@ -12,8 +12,8 @@ import CoreImage
 open class ImageOverlayItem: NSObject, ImageCompositionProvider, NSCopying {
     
     public var identifier: String
-    public var resource: ImageResource
-    required public init(resource: ImageResource) {
+    public var resource: Image1Resource
+    required public init(resource: Image1Resource) {
         identifier = ProcessInfo.processInfo.globallyUniqueString
         self.resource = resource
         let frame = CGRect(origin: CGPoint.zero, size: resource.size)
@@ -26,7 +26,7 @@ open class ImageOverlayItem: NSObject, ImageCompositionProvider, NSCopying {
     // MARK: - NSCopying
     
     open func copy(with zone: NSZone? = nil) -> Any {
-        let item = type(of: self).init(resource: resource.copy() as! ImageResource)
+        let item = type(of: self).init(resource: resource.copy() as! Image1Resource)
         item.identifier = identifier
         item.videoConfiguration = videoConfiguration.copy() as! VideoConfiguration
         item.startTime = startTime

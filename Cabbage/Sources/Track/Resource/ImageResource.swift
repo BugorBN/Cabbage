@@ -11,7 +11,7 @@ import CoreImage
 
 
 /// Provide a Image as video frame
-open class ImageResource: Resource {
+open class Image1Resource: Resource {
     
     public init(image: CIImage, duration: CMTime) {
         super.init()
@@ -33,7 +33,7 @@ open class ImageResource: Resource {
     
     // MARK: - NSCopying
     open override func copy(with zone: NSZone? = nil) -> Any {
-        let resource = super.copy(with: zone) as! ImageResource
+        let resource = super.copy(with: zone) as! Image1Resource
         resource.image = image
         return resource
     }

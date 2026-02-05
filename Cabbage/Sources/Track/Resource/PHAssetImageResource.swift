@@ -11,7 +11,7 @@ import CoreImage
 import Photos
 
 /// Load image from PHAsset as video frame
-open class PHAssetImageResource: ImageResource {
+open class PHAssetImageResource: Image1Resource {
     
     open var asset: PHAsset?
     

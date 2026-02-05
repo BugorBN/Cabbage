@@ -12,7 +12,7 @@ import AVFoundation
 
 
 /// Load image from AVAssetReader as video frame, but order reversed
-open class AVAssetReverseImageResource: ImageResource {
+open class AVAssetReverseImageResource: Image1Resource {
     
     public var asset: AVAsset?
     
